@@ -9,7 +9,7 @@
 Console.Write("Введите количество строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
-int colums = Convert.ToInt32(Console.ReadLine());
+int columns = Convert.ToInt32(Console.ReadLine());
 
 int [,] GetArray (int m, int n)
 {
@@ -23,15 +23,15 @@ int [,] GetArray (int m, int n)
     }
     return matrix;
 }
-int [,] result = GetArray (rows, colums);
 
+int [,] result = GetArray (rows, columns);
 void PrintArray (int [,] inputMatrix)
 {
     for (int i = 0; i < inputMatrix.GetLength(0); i++)
     {
         for (int m = 0; m < inputMatrix.GetLength(1); m++)
         {
-            Console.WriteLine(inputMatrix[i,m] + "\t");
+            Console.Write(inputMatrix[i,m] + "\t");
         }
         Console.WriteLine();
     }
